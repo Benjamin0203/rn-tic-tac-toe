@@ -10,7 +10,7 @@ import { Spectral_700Bold_Italic, Spectral_400Regular } from '@expo-google-fonts
 // import splash screen (same as the deprecated <AppLoading />) 
 import * as SplashScreen from 'expo-splash-screen';
 SplashScreen.preventAutoHideAsync();
-
+SplashScreen.hideAsync(); 
 //import components
 import { Home, Game } from "./screens/index"; // Home and Game are exported from ./screens/index.tsx
 import { Text } from "./components/index"; // Text is exported from ./components/index.tsx 
@@ -25,7 +25,7 @@ export default function App() {
         await loadAsync({ Ubuntu_700Bold, Ubuntu_400Regular, Spectral_700Bold_Italic, Spectral_400Regular } as any);
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove this if you copy and paste the code!
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        // await new Promise(resolve => setTimeout(resolve, 2000));
       } catch (e) {
         console.warn(e);
       } finally {
