@@ -19,7 +19,12 @@ export default function Text({ children, style, weight, ...props }: TextProps): 
     fontFamily = "Spectral_700Bold_Italic";
   }
   return (
-    <NativeText {...props} style={[{ fontFamily },style]}>{children}</NativeText>
+    <NativeText
+      {...props}
+      style={[{ fontFamily }, style]}
+    >
+      {children}
+    </NativeText>
   )
 }
 

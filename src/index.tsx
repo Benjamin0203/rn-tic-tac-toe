@@ -2,8 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Image, Text as NativeText } from 'react-native';
 import React, { useState, useEffect, useCallback } from 'react'
 
-// import Home from './screens/home/home';
-// import Game from './screens/game/game';
 import { Home, Game } from "./screens/index"; // Home and Game are exported from ./screens/index.tsx
 import { Text } from "./components/index"; // Text is exported from ./components/index.tsx 
 import { Ubuntu_400Regular, Ubuntu_700Bold } from '@expo-google-fonts/ubuntu';
