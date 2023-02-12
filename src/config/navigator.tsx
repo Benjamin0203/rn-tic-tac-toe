@@ -7,14 +7,19 @@ import { Home, Game } from '../screens';
 
 export type StackNavigatorParams = {
   Home: undefined;
-  Game: {gameId: string};
+  Game: { gameId: string };
 }
 
 const Stack = createNativeStackNavigator<StackNavigatorParams>();
 export default function Navigator(): ReactElement {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Game">
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Game" component={Game} />
       </Stack.Navigator>
