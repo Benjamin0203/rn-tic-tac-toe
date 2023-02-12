@@ -1,22 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Image, Text as NativeText } from 'react-native';
+/**
+ * NOT NEEDED (FOR NOW)
+ * source: https://www.udemy.com/course/react-native-tic-tac-toe/learn/lecture/22966258#questions/17110126
+ */
+
+/**
+import { View, Text } from 'react-native'
 import React, { useState, useEffect, useCallback } from 'react'
 
-
-//import fonts
-import { useFonts, loadAsync } from 'expo-font';
 import { Ubuntu_400Regular, Ubuntu_700Bold } from '@expo-google-fonts/ubuntu';
 import { Spectral_700Bold_Italic, Spectral_400Regular } from '@expo-google-fonts/spectral';
-// import splash screen (same as the deprecated <AppLoading />) 
+
+import { useFonts, loadAsync } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 SplashScreen.preventAutoHideAsync();
 
-//import components
-import { Home, Game } from "./screens/index"; // Home and Game are exported from ./screens/index.tsx
-import { Text } from "./components/index"; // Text is exported from ./components/index.tsx 
-import Navigator from "./config/navigator";
 
-export default function App() {
+export default function AppBootstrap() {
   const [appIsReady, setAppIsReady] = useState(false);
   useEffect(() => {
     async function prepare() {
@@ -52,29 +51,9 @@ export default function App() {
     return null;
   }
   return (
- 
-    <Navigator />
-
-
-    // <View style={styles.container} onLayout={onLayoutRootView}>
-    //   <Text 
-    //   style={{fontSize: 40}} 
-    //   onPress={() => alert(true)}
-    //   weight="700"
-    //   >Hello World
-    //   </Text>
-    //   <Navigator />
-    // </View>
-  );
+    <View>
+      <Text>app-bootstrap</Text>
+    </View>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: "100%",
-    height: "100%",
-  },
-});
+*/
